@@ -39,7 +39,7 @@ owner:
   bio: "I work on hard problems and write about some of them here."
   email: thomasmarkovich@gmail.com
   disqus-shortname: tmarkovich
-  twitter: tmarkovich #username
+  twitter: #username
   facebook: #username
   google:
     plus: #username
@@ -63,3 +63,4 @@ owner:
   weibo: #username
   flickr: #username
   codepen: #username
+  google_scholar: "https://scholar.google.com/citations?user=o0YtLvgAAAAJ&hl=en"

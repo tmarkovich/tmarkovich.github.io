@@ -1,5 +1,13 @@
 # careers section data
 # if you don't have language feature(language.yml is empty), ignore "i18n" items
+- name: Block
+  link: http://www.block.xyz/
+  date: Feburary 2023 - <i class="fa fa-clock-o" aria-hidden="true" title="Until Now"></i>
+  job: Senior Staff Research Scientist
+- name: Twitter
+  link: http://www.twitter.com/
+  date: June 2021 - Feburary 2023
+  job: Staff Research Scientist
 - name: Forge.AI
   link: http://www.forge.ai/
   date: November 2017 - <i class="fa fa-clock-o" aria-hidden="true" title="Until Now"></i>

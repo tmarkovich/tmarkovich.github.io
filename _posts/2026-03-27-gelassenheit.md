@@ -2,6 +2,7 @@
 layout: post
 title: "On Not Extracting"
 subtitle: "What Does It Mean to Stay Human While Building the Machine?"
+category: essays
 comments: true
 ---
 

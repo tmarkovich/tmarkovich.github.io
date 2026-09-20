@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Rethinking My Relationship With Technology"
+category: essays
 comments: true
 ---
 

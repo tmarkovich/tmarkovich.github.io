@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Knowledge Graphs for Enhanced Machine Reasoning at Forge.AI"
+category: engineering
 comments: true
 ---
 ## Introduction

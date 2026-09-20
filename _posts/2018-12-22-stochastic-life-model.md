@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Modeling Life Outcomes with Stochastic Methods"
+category: engineering
 comments: true
 ---
 ## Introduction

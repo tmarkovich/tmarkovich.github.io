@@ -2,6 +2,7 @@
 layout: post
 title: "Everything as Resource"
 subtitle: "On Heidegger, generative AI, and what it might mean to actually encounter something"
+category: essays
 comments: true
 ---
 

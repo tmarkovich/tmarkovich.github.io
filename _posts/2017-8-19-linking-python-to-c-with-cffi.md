@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Linking Python to C with CFFI"
+category: engineering
 comments: true
 ---
 ## Why link Python to C?

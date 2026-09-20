@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Croissants and Macarons"
+category: notes
 comments: true
 ---
 

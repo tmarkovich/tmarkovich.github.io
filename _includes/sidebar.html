@@ -13,14 +13,15 @@
         <a href="{{ site.url }}/">home</a>
         <span>/</span>
       </li>
-      {% for page in site.pages %} {% if page.title %}
+      {% for nav_page in site.pages %} {% if nav_page.title %}
       <li class="nav-item">
-        <a href="{{ site.url }}{{ page.url }}">{{ page.title }}</a>
-        {% unless forloop.last %}
-          <span>/</span>
-        {% endunless %}
+        <a href="{{ site.url }}{{ nav_page.url }}">{{ nav_page.title }}</a>
+        <span>/</span>
       </li>
       {% endif %} {% endfor %}
+      <li class="nav-item">
+        <a href="{{ site.url }}/feed.xml" title="Subscribe via RSS">rss</a>
+      </li>
     </ul>
   </nav>
   {% include social-links.html %}

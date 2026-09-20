@@ -6,7 +6,7 @@
 title: "Thomas Markovich"
 email: thomasmarkovich@gmail.com
 description: "Essays on technology and the practice of building it, plus notes from a career in machine learning research."
-url: "https://tmarkovich.com" # base hostname & protocol, no trailing slash
+url: "https://thomasmarkovich.com" # base hostname & protocol, no trailing slash
 baseurl: "" # site is served from the domain root
 
 

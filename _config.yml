@@ -6,7 +6,8 @@
 title: "Thomas Markovich"
 email: thomasmarkovich@gmail.com
 description: On Machine Learning, Python, C, and anything else
-url: https://tmarkovich.github.io/ # the base hostname & protocol for your site
+url: "https://tmarkovich.com" # base hostname & protocol, no trailing slash
+baseurl: "" # site is served from the domain root
 
 
 #

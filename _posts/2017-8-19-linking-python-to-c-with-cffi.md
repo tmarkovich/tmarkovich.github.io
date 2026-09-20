@@ -8,6 +8,8 @@ I hope that it is uncontroversial to state that Python is a great language that 
 
 For rapid prototyping, this turns out to be a significant time saver, but what are the costs of these indirection layers? This can be answered by exploring the callgraph for the following code that simply evaluates the log of the probability density function of the Beta distribution with distributional parameters 1 and 2:
 
+<!--more-->
+
 ```python
 from random import randint
 from scipy.stats import beta

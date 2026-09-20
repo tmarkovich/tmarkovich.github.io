@@ -18,6 +18,8 @@ struggle at large scale due to a mix of data integrity and performance issues.
 Solving this problem and enabling machine driven semantic reasoning at scale is
 one of the foundational technological challenges that we are addressing at [Forge.AI](https://forge.ai).
 
+<!--more-->
+
 To understand the complexity of this task, it's necessary to define what a
 knowledge graph is. There are many academic definitions floating around, but
 most are replete with jargon and impenetrable. Simply said, a knowledge graph

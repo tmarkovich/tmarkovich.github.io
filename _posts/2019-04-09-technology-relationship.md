@@ -6,6 +6,8 @@ comments: true
 
 I've been recently struggling with many little questions that have ultimately culminated in one, big, question. It's been deeply frustrating, because the only answer that I keep coming to is "I don't know."
 
+<!--more-->
+
 I've been reflecting a lot in the last few years on my relationships with technology and the influence that it's had on my life. I've tried to answer questions like "Does having a subreddit for every esoteric interest make life better?" or "How valuable is twitter, actually?" The spirit of these questions is certainly not new, but it seems that I've yet to find a satisfying answer. While I originally thought that these questions had some value; the imminent arrival of my son has given these questions a new significance.
 
 These are certainly not new questions. I remember my father musing about "kids these days" when he saw AOL Instant Messenger, email, and text messages dominate my social life; but he's also an engineer who has seen technology repeatedly improve our lives and society. He raised me to be technologically optimistic. Some of my fondest memories include building lego mindstorms robots together, or building computers together.

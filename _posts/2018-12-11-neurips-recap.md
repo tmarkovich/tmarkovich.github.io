@@ -5,6 +5,8 @@ comments: true
 ---
 With quick reflexes and a fortunate server error, I was lucky enough to get a ticket to the 2018 Neural Information Processing Systems Conference (NeurIPS). It was with great excitement that I attended to represent Forge.AI this year. NeurIPS provides its attendees with a week of talks, demonstrations, and incredible networking opportunities. I was able to catch up with old friends, and meet new friends and potential collaborators. For those of you who weren’t lucky enough to score a ticket, I thought it would be useful to provide a collection of highlights from the conference.
 
+<!--more-->
+
 ![]({{ site.url }}/assets/neurips_2018/nips_sign_edit.jpg)
 
 ## Scalable Bayesian Inference

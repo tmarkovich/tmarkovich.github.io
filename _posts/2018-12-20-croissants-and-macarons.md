@@ -10,6 +10,8 @@ to have the free time to pursue these desires. Recently I learned how to make,
 but not pronounce, croissants and macarons through lots of trial and error
 and some faithful taste testing by my wife and my coworkers.
 
+<!--more-->
+
 The croissants were surprisingly time consuming when compared to what I saw on
 the great british baking show. Even still, they turned out great and even my
 boss who was born and raised in France approved:

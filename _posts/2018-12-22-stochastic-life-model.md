@@ -27,6 +27,8 @@ discuss building individual models for the major features of life that affect
 cash flow; before finally combining all of the models together and briefly
 discussing their interpretive power.
 
+<!--more-->
+
 ## Simulating Some Simple Stochastic Processes
 
 ### The Wiener Process

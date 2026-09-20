@@ -37,7 +37,10 @@ layout: default
     {% if post.excerpt %}
     <div class="post-description">
       <p>
-        {{ post.excerpt }}
+        {{ post.excerpt | strip_html | strip_newlines | truncate: 320 }}
+      </p>
+      <p class="post-read-more">
+        <a href="{{ site.url }}{{ post.url }}" title="{{ post.title }}">Read more &rarr;</a>
       </p>
     </div>
     {% endif %}

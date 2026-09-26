@@ -46,7 +46,7 @@ giscus:
   repo: "tmarkovich/tmarkovich.github.io"
   repo_id: "MDEwOlJlcG9zaXRvcnkxMDAyMTUwNDc="
   category: "Announcements"
-  category_id: ""
+  category_id: "DIC_kwDOBfkpB84DGdae"
   mapping: "pathname"
 
 compress_html:

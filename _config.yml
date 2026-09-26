@@ -39,6 +39,16 @@ kramdown:
   toc_levels: 1..6
   enable_coderay: false
 
+# Comments, via GitHub Discussions. Nothing renders until category_id is set;
+# get both ids from https://giscus.app after enabling Discussions on the repo
+# and installing the giscus app.
+giscus:
+  repo: "tmarkovich/tmarkovich.github.io"
+  repo_id: "MDEwOlJlcG9zaXRvcnkxMDAyMTUwNDc="
+  category: "Announcements"
+  category_id: ""
+  mapping: "pathname"
+
 compress_html:
   clippings: all
   comments: ["<!--", "-->"]

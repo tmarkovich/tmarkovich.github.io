@@ -27,6 +27,19 @@ excerpt used for meta descriptions.
 Permalinks are `/articles/:year-:month/:title` and must not change; existing
 posts are linked from elsewhere.
 
+## Comments
+
+Comments are [giscus](https://giscus.app), backed by GitHub Discussions on this
+repo. Three one-time steps, in order:
+
+1. Settings -> General -> Features -> tick **Discussions**.
+2. Install the [giscus app](https://github.com/apps/giscus) on this repository.
+3. Fill `giscus.category_id` in `_config.yml` with the value giscus.app shows
+   for the Announcements category.
+
+Nothing renders until `category_id` is set, so the site is safe to deploy
+before then. Per-post, `comments: false` hides the thread.
+
 ## Local preview
 
 ```

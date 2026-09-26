@@ -20,6 +20,13 @@ layout: compress
     {{ content }}
   </article>
 
+  {% if page.comments and site.giscus.category_id and site.giscus.category_id != "" %}
+  <section class="giscus">
+    <h2>Comments</h2>
+    {% include giscus.html %}
+  </section>
+  {% endif %}
+
   <p class="back-link"><a href="{{ '/archive/' | relative_url }}">&larr; All posts</a></p>
 
   {% comment %} MathJax loads only where there is math to typeset. {% endcomment %}

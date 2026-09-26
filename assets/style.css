@@ -1,0 +1,334 @@
+/* =============================================================================
+   Based on jekyllBear by knhash (https://github.com/knhash/jekyllBear),
+   a Jekyll port of the Bear Blog theme. Adapted for thomasmarkovich.com.
+
+   The two knobs worth touching: --font-main / --font-secondary (typeface)
+   and --font-scale (size). Everything else derives from the palette below.
+   ============================================================================= */
+
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&display=swap');
+
+:root {
+    /* Layout */
+    --width: 720px;
+
+    /* Typography */
+    --font-main: 'IBM Plex Mono', ui-monospace, SFMono-Regular, Menlo, monospace;
+    --font-secondary: 'IBM Plex Mono', ui-monospace, SFMono-Regular, Menlo, monospace;
+    --font-monospace: 'IBM Plex Mono', ui-monospace, SFMono-Regular, Menlo, monospace;
+    --font-scale: 0.9em;
+
+    /* Spacing */
+    --spacing-xs: 5px;
+    --spacing-sm: 10px;
+    --spacing-md: 20px;
+    --spacing-lg: 40px;
+
+    --radius-sm: 3px;
+    --transition-fast: 0.2s;
+
+    /* Pine forest palette - light */
+    --background-color: #F5F7F3;
+    --heading-color: #1A3025;
+    --text-color: #0F2018;
+    --link-color: #2D5016;
+    --visited-color: #1E3A11;
+    --main-color: #4A7C59;
+    --code-background-color: #E8EDEA;
+    --code-color: #1A3025;
+    --blockquote-color: #7A9B85;
+    --muted-color: #5C7566;
+
+    --hover-color: white;
+    --border-color: var(--blockquote-color);
+
+    /* Syntax highlighting - light */
+    --syn-comment: #6A8A72;
+    --syn-keyword: #1E5A2E;
+    --syn-string: #7A4A12;
+    --syn-number: #8A3A2A;
+    --syn-name: #1A3025;
+    --syn-builtin: #2A5A6A;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --background-color: #0D1B12;
+        --heading-color: #C8D8CE;
+        --text-color: #E0EADE;
+        --link-color: #7AB069;
+        --visited-color: #9BC490;
+        --main-color: #4A7C59;
+        --code-background-color: #152218;
+        --code-color: #C8D8CE;
+        --blockquote-color: #4A6B52;
+        --muted-color: #8FA896;
+
+        --hover-color: #0D1B12;
+
+        --syn-comment: #6E8B76;
+        --syn-keyword: #8FD08A;
+        --syn-string: #D8B878;
+        --syn-number: #E0927A;
+        --syn-name: #D8E4DA;
+        --syn-builtin: #86BFD0;
+    }
+}
+
+/* =============================================================================
+   BASE
+   ============================================================================= */
+
+body {
+    font-family: var(--font-secondary);
+    font-size: var(--font-scale);
+    margin: auto;
+    padding: var(--spacing-md);
+    max-width: var(--width);
+    text-align: left;
+    background-color: var(--background-color);
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    line-height: 1.5;
+    color: var(--text-color);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-main);
+    color: var(--heading-color);
+    line-height: 1.3;
+}
+
+strong, b {
+    color: var(--heading-color);
+}
+
+a {
+    color: var(--link-color);
+    font-family: var(--font-main);
+    cursor: pointer;
+    text-decoration: none;
+    border-bottom: 3px solid var(--main-color);
+    transition: all var(--transition-fast) ease;
+}
+
+a:hover {
+    background-color: var(--main-color);
+    color: var(--hover-color);
+    text-decoration: none;
+}
+
+a:visited {
+    color: var(--visited-color);
+}
+
+/* External link marker */
+a[href^="http"]:where(:not([href*="thomasmarkovich.com"])):not(:has(img))::after {
+    content: "↗";
+    font-family: var(--font-monospace);
+}
+
+/* =============================================================================
+   LAYOUT
+   ============================================================================= */
+
+header {
+    margin-bottom: var(--spacing-lg);
+    padding-bottom: var(--spacing-md);
+    border-bottom: 3px dotted var(--main-color);
+}
+
+header .title {
+    margin-bottom: var(--spacing-xs);
+    font-size: 1.5em;
+}
+
+header .title a {
+    border-bottom: none;
+}
+
+header .title a:hover {
+    background-color: transparent;
+    color: var(--heading-color);
+}
+
+nav a {
+    margin-right: 8px;
+}
+
+main {
+    line-height: 1.6;
+}
+
+footer {
+    margin-top: var(--spacing-lg);
+    border-top: 3px dotted var(--main-color);
+    padding: 25px 0;
+    text-align: center;
+    color: var(--muted-color);
+}
+
+.back-link {
+    margin-top: var(--spacing-lg);
+}
+
+/* =============================================================================
+   CONTENT
+   ============================================================================= */
+
+hr {
+    border: 0;
+    border-top: 1px dashed var(--border-color);
+}
+
+img {
+    max-width: 100%;
+}
+
+blockquote {
+    border-left: 1px solid var(--blockquote-color);
+    color: var(--code-color);
+    padding-left: var(--spacing-md);
+    font-style: italic;
+    margin-left: 0;
+}
+
+.subtitle {
+    color: var(--muted-color);
+    font-style: italic;
+    margin-top: calc(-1 * var(--spacing-sm));
+}
+
+.post-meta,
+.entry-date,
+.post-date {
+    color: var(--muted-color);
+}
+
+.entry-note {
+    color: var(--muted-color);
+    margin-top: calc(-1 * var(--spacing-sm));
+}
+
+/* =============================================================================
+   CODE
+   ============================================================================= */
+
+code {
+    font-family: var(--font-monospace);
+    padding: 2px;
+    background-color: var(--code-background-color);
+    color: var(--code-color);
+    border-radius: var(--radius-sm);
+}
+
+.highlight,
+.highlighter-rouge {
+    padding: 1px 15px;
+    background-color: var(--code-background-color);
+    color: var(--code-color);
+    border-radius: var(--radius-sm);
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    overflow-x: auto;
+}
+
+.highlight pre,
+.highlighter-rouge pre {
+    overflow-x: auto;
+}
+
+.highlight .c, .highlight .c1, .highlight .cm, .highlight .cs, .highlight .cd { color: var(--syn-comment); font-style: italic; }
+.highlight .cp { color: var(--syn-builtin); }
+.highlight .cpf { color: var(--syn-string); }
+.highlight .k, .highlight .kd, .highlight .kn, .highlight .kp, .highlight .kr, .highlight .kt, .highlight .kc { color: var(--syn-keyword); font-weight: 500; }
+.highlight .o, .highlight .ow { color: var(--syn-keyword); }
+.highlight .s, .highlight .s1, .highlight .s2, .highlight .sb, .highlight .sc, .highlight .sd, .highlight .se, .highlight .sh, .highlight .si, .highlight .sx, .highlight .sr, .highlight .ss { color: var(--syn-string); }
+.highlight .m, .highlight .mf, .highlight .mh, .highlight .mi, .highlight .mo, .highlight .il { color: var(--syn-number); }
+.highlight .n, .highlight .na, .highlight .nl, .highlight .nv, .highlight .nx { color: var(--syn-name); }
+.highlight .nb, .highlight .bp, .highlight .nc, .highlight .nn, .highlight .nf, .highlight .nd, .highlight .ne, .highlight .ni, .highlight .no, .highlight .nt { color: var(--syn-builtin); }
+.highlight .p, .highlight .pi { color: var(--code-color); }
+.highlight .err { color: var(--syn-number); }
+.highlight .gd { color: var(--syn-number); }
+.highlight .gi { color: var(--syn-keyword); }
+.highlight .gh, .highlight .gu { color: var(--syn-comment); font-weight: 500; }
+.highlight .ge { font-style: italic; }
+.highlight .gs { font-weight: 500; }
+
+/* =============================================================================
+   TABLES
+   ============================================================================= */
+
+table {
+    width: 100%;
+    border-spacing: 0;
+    display: block;
+    overflow-x: auto;
+}
+
+th, td {
+    padding: 6px 13px;
+    border: 1px solid var(--border-color);
+    font-size: 1em;
+}
+
+/* =============================================================================
+   POST LISTS
+   ============================================================================= */
+
+ul.blog-posts,
+ul.entry-list {
+    list-style-type: none;
+    padding: unset;
+}
+
+ul.blog-posts li,
+ul.entry-list li {
+    display: flex;
+    margin-bottom: var(--spacing-sm);
+}
+
+ul.blog-posts li span,
+ul.entry-list li .entry-date {
+    flex: 0 0 130px;
+}
+
+ul.entry-list li .entry-date {
+    flex-basis: 190px;
+}
+
+ul.blog-posts li a:visited {
+    color: var(--visited-color);
+}
+
+@media (max-width: 560px) {
+    ul.blog-posts li,
+    ul.entry-list li {
+        display: block;
+    }
+
+    ul.blog-posts li span,
+    ul.entry-list li .entry-date {
+        display: block;
+    }
+}
+
+/* =============================================================================
+   MATH
+   ============================================================================= */
+
+mjx-container[display="true"] {
+    overflow-x: auto;
+    overflow-y: hidden;
+    padding: 2px 0;
+}
+
+/* =============================================================================
+   COMMENTS
+   ============================================================================= */
+
+.giscus {
+    margin-top: var(--spacing-lg);
+    padding-top: var(--spacing-md);
+    border-top: 1px dashed var(--border-color);
+}

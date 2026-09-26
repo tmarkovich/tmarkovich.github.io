@@ -1,4 +1,28 @@
 ---
-layout: post_listing
+layout: default
 permalink: /
 ---
+
+<p>
+  I'm a machine learning research scientist. I write here about the systems
+  we're building and what it means to build them &mdash; and, earlier, about
+  the numerical and graph work that got me here.
+  <a href="{{ '/about/' | relative_url }}">More about me</a>.
+</p>
+
+<h2>Recent posts</h2>
+
+<ul class="blog-posts">
+  {% for post in site.posts limit: 6 %}
+  <li>
+    <span class="post-date"><time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%b %-d, %Y" }}</time></span>
+    <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+  </li>
+  {% endfor %}
+</ul>
+
+<p>
+  <a href="{{ '/archive/' | relative_url }}">All {{ site.posts | size }} posts</a>
+  &middot; <a href="{{ '/categories/' | relative_url }}">by section</a>
+  &middot; <a href="{{ '/feed.xml' | relative_url }}">RSS</a>
+</p>

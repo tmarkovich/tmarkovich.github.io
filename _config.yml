@@ -9,13 +9,23 @@ description: "Essays on technology and the practice of building it, plus notes f
 url: "https://thomasmarkovich.com" # base hostname & protocol, no trailing slash
 baseurl: "" # site is served from the domain root
 
+# Header navigation, in order. RSS is appended automatically.
+nav:
+  - title: Archive
+    url: /archive/
+  - title: Sections
+    url: /categories/
+  - title: About
+    url: /about/
+  - title: Resume
+    url: /resume/
 
 #
 ###################################
 # Jekyll configuration
 ####################################
 #
-timezone:          Boston/USA
+timezone:          America/New_York
 markdown:          kramdown
 highlighter:       rouge
 excerpt_separator: <!--more-->
@@ -28,6 +38,19 @@ kramdown:
   toc_levels: 1..6
   enable_coderay: false
 
+compress_html:
+  clippings: all
+  comments: ["<!--", "-->"]
+  endings: all
+  ignore:
+    envs: [development]
+
+exclude:
+  - README.md
+  - LICENSE.txt
+  - Rakefile
+  - vendor
+
 #
 ###################################
 # Site Owner configuration
@@ -35,33 +58,9 @@ kramdown:
 #
 owner:
   name: "Thomas Markovich"
-  avatar:
   job: "Machine Learning Research Scientist"
   bio: "Machine learning research scientist. I write about the systems we build and what it means to build them."
   email: thomasmarkovich@gmail.com
-  disqus-shortname: tmarkovich
-  twitter: #username
-  facebook: #username
-  google:
-    plus: #username
-    verify:
-    ad-client:
-    ad-slot:
-  bing-verify:
-  github: tmarkovich #username
-  stackoverflow: #123456/username   from a "http://stackoverflow.com/users/123456/username" link
-  linkedin: thomas-markovich-75618044 #username
-  xing: #username
-  instagram: #username
-  lastfm: #username
-  tumblr: #username
-  pinterest: #username
-  foursquare: #username
-  steam: #username
-  dribbble: #username
-  youtube: #username
-  soundcloud: #username
-  weibo: #username
-  flickr: #username
-  codepen: #username
+  github: tmarkovich
+  linkedin: thomas-markovich-75618044
   google_scholar: "https://scholar.google.com/citations?user=o0YtLvgAAAAJ&hl=en"

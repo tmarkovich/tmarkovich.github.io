@@ -17,7 +17,7 @@ treatment of long-range van der Waals interactions, mostly by writing high
 performance numerical code in C and Fortran. Before that I studied physics and
 mathematics at the University of Houston. Publications are on
 [Google Scholar](https://scholar.google.com/citations?user=o0YtLvgAAAAJ&hl=en),
-and the longer version of my background is on my [resume]({{ site.url }}/resume/).
+and the longer version of my background is on my [resume]({{ '/resume/' | relative_url }}).
 
 ## What I write about here
 
@@ -37,12 +37,12 @@ be harder than it sounds.
 
 If research notes end up as a third stream, they'll be filed alongside these
 rather than just dropped into the date-ordered archive. Sections live on the
-[categories]({{ site.url }}/categories/) page; everything, in order, is in the
-[archive]({{ site.url }}/archive/).
+[sections]({{ '/categories/' | relative_url }}) page; everything, in order, is in the
+[archive]({{ '/archive/' | relative_url }}).
 
 ## Elsewhere
 
-The [RSS feed]({{ site.url }}/feed.xml) is the reliable way to follow along.
+The [RSS feed]({{ '/feed.xml' | relative_url }}) is the reliable way to follow along.
 You can also reach me at
 [thomasmarkovich@gmail.com](mailto:thomasmarkovich@gmail.com), or on
 [GitHub](https://github.com/tmarkovich) and

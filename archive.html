@@ -1,35 +1,25 @@
 ---
 layout: page
-title:  Archive
+title: Archive
 permalink: /archive/
 ---
 
-<div class="archive">
-  <div class="timeline" id="timeline">
-    {% for post in site.posts %}
-    {% unless post.next %}
-    <div class="archive-title">
-      <h4 class="archive-year">{{ post.date | date: '%Y' }}</h4>
-    </div>
-
-    <ul>
-    {% else %}
-      {% capture year %}{{ post.date | date: '%Y' }}{% endcapture %}
-      {% capture nyear %}{{ post.next.date | date: '%Y' }}{% endcapture %}
-    {% if year != nyear %}
-    </ul>
-    <div class="archive-title">
-      <h4 class="archive-year">{{ post.date | date: '%Y' }}</h4>
-    </div>
-
-    <ul>
-    {% endif %}
+{% assign current_year = "" %}
+{% for post in site.posts %}
+  {% capture year %}{{ post.date | date: '%Y' }}{% endcapture %}
+  {% if year != current_year %}
+    {% unless forloop.first %}
+</ul>
     {% endunless %}
-    <li>
-      <div style="width:60px;float:left;">{{ post.date | date: "%b %-d" }}</div> <a href="{{ site.url }}{{ post.url }}">{{ post.title }}</a></li>
-    {% endfor %}
-    </ul>
-
-  </div>
-
-</div>
+<h2>{{ year }}</h2>
+<ul class="blog-posts">
+    {% assign current_year = year %}
+  {% endif %}
+  <li>
+    <span class="post-date"><time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%b %-d, %Y" }}</time></span>
+    <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+  </li>
+  {% if forloop.last %}
+</ul>
+  {% endif %}
+{% endfor %}

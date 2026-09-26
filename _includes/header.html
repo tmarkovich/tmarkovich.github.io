@@ -1,0 +1,11 @@
+<header>
+  <h2 class="title"><a href="{{ '/' | relative_url }}">{{ site.title }}</a></h2>
+  <nav>
+    <p>
+      {% for item in site.nav %}
+      <a href="{{ item.url | relative_url }}">{{ item.title }}</a>
+      {% endfor %}
+      <a href="{{ '/feed.xml' | relative_url }}" title="Subscribe via RSS">RSS</a>
+    </p>
+  </nav>
+</header>

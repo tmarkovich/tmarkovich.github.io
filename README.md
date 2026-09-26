@@ -1,45 +1,43 @@
-# Update 05/06/2016
+# thomasmarkovich.com
 
-Important! It's better to download the gzipped files instead of forking the repo. I would really appreciate if you could give me a star. 😁
+Source for [thomasmarkovich.com](https://thomasmarkovich.com), a Jekyll site
+hosted on GitHub Pages.
 
-This project is under MIT license, so feel free to make it your own.
+The theme is adapted from [jekyllBear](https://github.com/knhash/jekyllBear) by
+knhash, itself a Jekyll port of the [Bear Blog](https://bearblog.dev) theme.
 
-# Leonids Jekyll Themes
+## Writing a post
 
-**[Leonids](http://renyuanz.github.io/leonids)** is a clean Jekyll theme perfect for powering your GitHub hosted blog.
+Add a file to `_posts/` named `YYYY-MM-DD-slug.md`:
 
-## What is Leonids?
+```yaml
+---
+layout: post
+title: "Post Title"
+subtitle: "Optional deck"
+category: essays    # essays | engineering | notes
+comments: true      # set false to hide the comment thread
+math: false         # set true only to opt out; MathJax loads by default
+---
+```
 
-* Responsive templates. Looking good on mobile, tablet, and desktop.
-* Simple and clear permalink structure.
-* Support for Disqus Comments.
-* Support for multi-authors.
-* **And** the Leonids (/ˈliːənɪdz/ lee-ə-nidz) are a prolific meteor shower associated with the comet [Tempel-Tuttle](https://en.wikipedia.org/wiki/55P/Tempel%E2%80%93Tuttle).
+Put `<!--more-->` after the opening paragraphs — everything above it becomes the
+excerpt used for meta descriptions.
 
-See a [demo](http://renyuanz.github.io/leonids/) hosted on GitHub.
+Permalinks are `/articles/:year-:month/:title` and must not change; existing
+posts are linked from elsewhere.
 
-## Quick setup
+## Local preview
 
-`git clone https://github.com/renyuanz/leonids`
+```
+bundle exec jekyll serve
+```
 
-`cd leonids`
+## Layout
 
-`jekyll server`
-
-Check out your awesome blog at `http://localhost:4000` and Cheers!
-
-## Resume Page by [@Skn0tt](https://github.com/Skn0tt)
-Leonids features a simple resume page. It is divided up into five sections: 
-
-* Bio (Edit \_data/index/careers.yml)
-* Education (Edit \_data/index/education.yml)
-* Skills (Edit \_data/index/skills.yml)
-* Projects (Edit \_data/index/projects.yml)
-* About (Edit \_includes/sections/about.html)
-
-You can put all your info into these files, and they will be featured on the resume page.
-
-## TODO
-
-- [ ] Redesign categories page. Ref: [dribbble: blog category section By Ilja Miskov](https://dribbble.com/shots/2274792-Blog-Category-Selection)
-- [ ] Multi languages support.
+- `_layouts/` — `default`, `page`, `post`, `resume`, plus jekyllBear's `compress`
+- `_includes/` — `head`, `header`, `footer`, `mathjax`, `giscus`, `custom-head`
+- `assets/style.css` — the whole theme; `--font-main` and `--font-scale` at the
+  top are the knobs worth touching
+- `_data/index/` — resume content
+- `CNAME` — custom domain, load-bearing; deleting it breaks the domain

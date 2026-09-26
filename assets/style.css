@@ -29,47 +29,47 @@
     --transition-fast: 0.2s;
 
     /* PALETTE:LIGHT:START */
-    /* Pine forest palette - light */
-    --background-color: #F5F7F3;
-    --heading-color: #1A3025;
-    --text-color: #0F2018;
-    --link-color: #2D5016;
-    --visited-color: #1E3A11;
-    --main-color: #4A7C59;
-    --code-background-color: #E8EDEA;
-    --code-color: #1A3025;
-    --blockquote-color: #7A9B85;
-    --muted-color: #5C7566;
+    /* Bear default palette - light */
+    --background-color: #FFFFFF;
+    --heading-color: #222222;
+    --text-color: #3F3F3F;
+    --link-color: #3273DC;
+    --visited-color: #7A5CB8; /* darkened from Bear's #8B6FCB, which is 4.0:1 on white */
+    --main-color: #3273DC;
+    --code-background-color: #F2F2F2;
+    --code-color: #222222;
+    --blockquote-color: #555555;
+    --muted-color: #6B6B6B;
     --hover-color: white;
-    --syn-comment: #6A8A72;
-    --syn-keyword: #1E5A2E;
-    --syn-string: #7A4A12;
-    --syn-number: #8A3A2A;
-    --syn-name: #1A3025;
-    --syn-builtin: #2A5A6A;
+    --syn-comment: #8A8A8A;
+    --syn-keyword: #1F6FB2;
+    --syn-string: #8A5A1A;
+    --syn-number: #A23B2E;
+    --syn-name: #222222;
+    --syn-builtin: #2B6E8F;
     /* PALETTE:LIGHT:END */
 }
 
 @media (prefers-color-scheme: dark) {
     :root {
         /* PALETTE:DARK:START */
-        --background-color: #0D1B12;
-        --heading-color: #C8D8CE;
-        --text-color: #E0EADE;
-        --link-color: #7AB069;
-        --visited-color: #9BC490;
-        --main-color: #4A7C59;
-        --code-background-color: #152218;
-        --code-color: #C8D8CE;
-        --blockquote-color: #4A6B52;
-        --muted-color: #8FA896;
-        --hover-color: #0D1B12;
-        --syn-comment: #6E8B76;
-        --syn-keyword: #8FD08A;
-        --syn-string: #D8B878;
-        --syn-number: #E0927A;
-        --syn-name: #D8E4DA;
-        --syn-builtin: #86BFD0;
+        --background-color: #01242E;
+        --heading-color: #EEEEEE;
+        --text-color: #DDDDDD;
+        --link-color: #8CC2DD;
+        --visited-color: #B3A0DE;
+        --main-color: #3E7A93;
+        --code-background-color: #001A21;
+        --code-color: #DDDDDD;
+        --blockquote-color: #BBBBBB;
+        --muted-color: #9BB3BC;
+        --hover-color: #01242E;
+        --syn-comment: #7E97A0;
+        --syn-keyword: #8CC2DD;
+        --syn-string: #DCC08A;
+        --syn-number: #E8968A;
+        --syn-name: #DDDDDD;
+        --syn-builtin: #9FD8C8;
         /* PALETTE:DARK:END */
     }
 }

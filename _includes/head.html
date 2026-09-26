@@ -30,6 +30,8 @@
   <meta property="og:description" content="{{ page_description | xml_escape }}">
   <meta property="og:url" content="{{ page.url | replace:'index.html','' | absolute_url }}">
   <meta name="twitter:card" content="summary">
+
+  {% include custom-head.html %}
 </head>
 
 <body>

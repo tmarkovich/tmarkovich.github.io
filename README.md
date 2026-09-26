@@ -40,6 +40,18 @@ repo. Three one-time steps, in order:
 Nothing renders until `category_id` is set, so the site is safe to deploy
 before then. Per-post, `comments: false` hides the thread.
 
+## Analytics
+
+Cloudflare Web Analytics, via the beacon in `_includes/custom-head.html`. The
+token is public by design -- it ships in the page source of every site using
+Web Analytics -- so it lives in the repo rather than in a secret.
+
+In the Cloudflare dashboard this site must be set up with **"Enable with JS
+snippet installation"**, not automatic setup. Automatic injection is done by
+Cloudflare's zone HTML rewriter, which only touches responses Cloudflare
+proxies; GitHub Pages responses never pass through it, so the automatic
+toggle silently reports zeros forever.
+
 ## Local preview
 
 ```

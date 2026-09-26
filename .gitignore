@@ -4,3 +4,7 @@ _site
 .jekyll-metadata
 _drafts
 .ruby-version
+
+# The global gitignore (~/.gitignore_global) excludes *.png; site images
+# belong in the repo, so re-include them here.
+!*.png

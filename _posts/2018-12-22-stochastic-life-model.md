@@ -22,7 +22,7 @@ distribution. With this modeling technique in hand, I could start to answer
 questions such as "What size house can we afford to reliably buy, if we're
 targeting a due date of fall 2019", with an answer like
 "99.7% of the time, our cash on hand is projected to be remain positive with a
-purchase price of $500,000" [1]. The rest of this post is organized as follows:
+purchase price of <span class="nomath">$500,000</span>" [1]. The rest of this post is organized as follows:
 we start by discussing a simple stochastic process in python, and then we
 discuss building individual models for the major features of life that affect
 cash flow; before finally combining all of the models together and briefly

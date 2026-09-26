@@ -2,6 +2,7 @@
 layout: post
 title: "Knowledge Graphs for Enhanced Machine Reasoning at Forge.AI"
 category: engineering
+math: false
 comments: true
 ---
 ## Introduction
@@ -122,7 +123,7 @@ event is something that a customer would care about, given their stated
 interests. To make this concrete, let's consider the following news story in
 regards to a customer that is interested in news events relating to Samsung:
 
-> "Russia’s Norilsk Nickel has teamed up with Russian Platinum to invest $4.4bn to develop mining projects in Siberia, which contains some of the world’s richest deposits of platinum and palladium. The two companies will form a joint venture to develop projects in the Taimyr Peninsula in Russia’s far north with an aim to become the world’s largest producer of the precious metals, they said Wednesday."
+> "Russia’s Norilsk Nickel has teamed up with Russian Platinum to invest <span class="nomath">$4.4bn</span> to develop mining projects in Siberia, which contains some of the world’s richest deposits of platinum and palladium. The two companies will form a joint venture to develop projects in the Taimyr Peninsula in Russia’s far north with an aim to become the world’s largest producer of the precious metals, they said Wednesday."
 
 It's certainly not obvious to me how this story is connected to Samsung. The
 question at hand is to determine whether this news event is related to Samsung
@@ -164,7 +165,7 @@ knowledge itself.
 
 There are a small number of facts that I'd be willing to bet my life on --
 something like Auston Matthews is a Toronto Maple Leaf -- and a great many facts
-that I'd be willing to bet $20 dollars on -- for example, the Boston Massacre
+that I'd be willing to bet <span class="nomath">$20 dollars</span> on -- for example, the Boston Massacre
 happened in 1770. Both are true but, due to the amount of information that I've
 recently read, I know considerably more about the former than the latter and,
 therefore, am more confident about it. Motivated by this, we have designed our

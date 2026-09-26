@@ -21,6 +21,13 @@ layout: compress
   </article>
 
   <p class="back-link"><a href="{{ '/archive/' | relative_url }}">&larr; All posts</a></p>
+
+  {% comment %} MathJax loads only where there is math to typeset. {% endcomment %}
+  {% assign load_math = false %}
+  {% if content contains '$' or content contains '\(' %}{% assign load_math = true %}{% endif %}
+  {% if page.math == true %}{% assign load_math = true %}{% endif %}
+  {% if page.math == false %}{% assign load_math = false %}{% endif %}
+  {% if load_math %}{% include mathjax.html %}{% endif %}
 </main>
 
 {% include footer.html %}
